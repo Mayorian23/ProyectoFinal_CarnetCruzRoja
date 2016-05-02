@@ -70,7 +70,7 @@ public class CarnetCruzRoja {
 
 
     public String toString() {
-        return Nombre+""+ Apellidos+"/n"+ DNI+"/n"+ Provincia+""+ Localidad+"/n"+ Servicio+""+ Fecha_caducidad;
+        return "\n\n"+Nombre+" "+ Apellidos+"\n"+DNI+"\n"+Provincia+", "+ Localidad+"\n"+Servicio+", "+Fecha_caducidad;
     }
 
 }
