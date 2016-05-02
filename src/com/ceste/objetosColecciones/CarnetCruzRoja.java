@@ -67,4 +67,9 @@ public class CarnetCruzRoja {
     public String getFecha_caducidad() {
         return Fecha_caducidad;
     }
+
+
+    public String toString() {
+        return Nombre+""+ Apellidos+"/n"+ DNI+"/n"+ Provincia+""+ Localidad+"/n"+ Servicio+""+ Fecha_caducidad;
+    }
 }
