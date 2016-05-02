@@ -1,9 +1,14 @@
 package com.ceste.objetosColecciones;
+
+import java.util.ArrayList;
+
 /**
  * Created by Mayorian on 25/04/2016.
  */
 public class Main {
     public static void main (String [] args){
+
+        ArrayList<CarnetCruzRoja> Carnets = new ArrayList<>();
 
         CarnetCruzRoja carnet1 = new CarnetCruzRoja("Y4587965254E");
         carnet1.setNombre("mayorian");
@@ -39,6 +44,12 @@ public class Main {
         carnet1.setProvincia("zaragoza");
         carnet1.setLocalidad("zaragoza");
         carnet1.setFecha_caducidad("20-9-2016");
+
+        Carnets.add(carnet1);
+        Carnets.add(carnet2);
+        Carnets.add(carnet3);
+        Carnets.add(carnet4);
+        Carnets.add(carnet5);
 
     }
 }
