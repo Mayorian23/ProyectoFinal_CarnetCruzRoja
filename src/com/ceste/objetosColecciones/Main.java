@@ -1,6 +1,8 @@
 package com.ceste.objetosColecciones;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Mayorian on 25/04/2016.
@@ -50,6 +52,7 @@ public class Main {
         carnet5.setServicio("estudiante");
         carnet5.setFecha_caducidad("20-9-2016");
 
+        //Agregamos los objetos al arrayList.
         Carnets.add(carnet1);
         Carnets.add(carnet2);
         Carnets.add(carnet2);
@@ -57,6 +60,18 @@ public class Main {
         Carnets.add(carnet4);
         Carnets.add(carnet5);
 
-        System.out.println(Carnets);
+        //System.out.println(Carnets);
+
+        //Agregamos el HashSet.
+
+        Set<CarnetCruzRoja> Cart = new HashSet<CarnetCruzRoja>();
+        Cart.add(carnet1);
+        Cart.add(carnet2);
+        Cart.add(carnet2);
+        Cart.add(carnet3);
+        Cart.add(carnet4);
+        Cart.add(carnet5);
+
+        System.out.println(Cart);
     }
 }
