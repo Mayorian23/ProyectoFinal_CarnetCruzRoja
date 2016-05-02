@@ -4,14 +4,41 @@ package com.ceste.objetosColecciones;
  */
 public class Main {
     public static void main (String [] args){
-        CarnetCruzRoja nombre = new CarnetCruzRoja(" ");
-        System.out.println(nombre.toString());
 
-        CarnetCruzRoja carnet1 = new CarnetCruzRoja("String DNI");
-        CarnetCruzRoja carnet2 = new CarnetCruzRoja("String DNI");
-        CarnetCruzRoja carnet3 = new CarnetCruzRoja("String DNI");
-        CarnetCruzRoja carnet4 = new CarnetCruzRoja("String DNI");
-        CarnetCruzRoja carnet5 = new CarnetCruzRoja("String DNI");
+        CarnetCruzRoja carnet1 = new CarnetCruzRoja("Y4587965254E");
+        carnet1.setNombre("mayorian");
+        carnet1.setApellidos("caballero");
+        carnet1.setProvincia("zaragoza");
+        carnet1.setLocalidad("zaragoza");
+        carnet1.setFecha_caducidad("10-8-2016");
+
+        CarnetCruzRoja carnet2 = new CarnetCruzRoja("Y8754985264E");
+        carnet2.setNombre("carmen");
+        carnet2.setApellidos("osorio");
+        carnet2.setProvincia("zaragoza");
+        carnet2.setLocalidad("zaragoza");
+        carnet2.setFecha_caducidad("15-8-2016");
+
+        CarnetCruzRoja carnet3 = new CarnetCruzRoja("Y7521354157E");
+        carnet3.setNombre("luis");
+        carnet3.setApellidos("calderin");
+        carnet3.setProvincia("zaragoza");
+        carnet3.setLocalidad("zaragoza");
+        carnet3.setFecha_caducidad("8-8-2016");
+
+        CarnetCruzRoja carnet4 = new CarnetCruzRoja("Y4874510215E");
+        carnet4.setNombre("fitz");
+        carnet4.setApellidos("barnez");
+        carnet4.setProvincia("zaragoza");
+        carnet4.setLocalidad("zaragoza");
+        carnet4.setFecha_caducidad("11-8-2016");
+
+        CarnetCruzRoja carnet5 = new CarnetCruzRoja("Y5489456214E");
+        carnet5.setNombre("jorge");
+        carnet5.setApellidos("garrido");
+        carnet1.setProvincia("zaragoza");
+        carnet1.setLocalidad("zaragoza");
+        carnet1.setFecha_caducidad("20-9-2016");
 
     }
 }
