@@ -68,7 +68,8 @@ public class CarnetCruzRoja {
         return Fecha_caducidad;
     }
 
-
+    // Implementacion del metodo toString.
+    
     public String toString() {
         return "\n\n"+Nombre+" "+ Apellidos+"\n"+DNI+"\n"+Provincia+", "+ Localidad+"\n"+Servicio+", "+Fecha_caducidad;
     }
