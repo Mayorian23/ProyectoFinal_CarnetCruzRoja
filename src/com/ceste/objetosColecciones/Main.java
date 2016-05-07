@@ -77,11 +77,24 @@ public class Main {
         cComprble.add(carnet4);
         cComprble.add(carnet5);
 
-        for (Iterator<CarnetCruzRoja> iter = cComprble.iterator(); iter.hasNext(); ) {
-            CarnetCruzRoja ccrComparable = iter.next();
-            System.out.println(ccrComparable);
+       // for (Iterator<CarnetCruzRoja> iter = cComprble.iterator(); iter.hasNext(); ) {
+          //  CarnetCruzRoja ccrComparable = iter.next();
+           // System.out.println(ccrComparable);
+       // }
 
+        //implemento el comparator por DNI
 
+        Comparator comparoDni = new OrdenarPorDNI();
+        Set<CarnetCruzRoja> OrdenDNI = new TreeSet<>(comparoDni);
+        OrdenDNI.add(carnet1);
+        OrdenDNI.add(carnet2);
+        OrdenDNI.add(carnet3);
+        OrdenDNI.add(carnet4);
+        OrdenDNI.add(carnet5);
+
+        for (Iterator<CarnetCruzRoja> iter = OrdenDNI.iterator(); iter.hasNext(); ) {
+            CarnetCruzRoja DNIordenado = iter.next();
+            System.out.println(DNIordenado);
         }
     }
 }

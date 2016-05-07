@@ -83,7 +83,6 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
 
     }
 
-
 }
 
 
