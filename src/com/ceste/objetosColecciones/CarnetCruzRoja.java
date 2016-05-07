@@ -3,7 +3,7 @@ package com.ceste.objetosColecciones;
 /**
  * Created by Mayorian on 25/04/2016.
  */
-public class CarnetCruzRoja {
+public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
 
    private String Nombre;
    private String Apellidos;
@@ -69,9 +69,21 @@ public class CarnetCruzRoja {
     }
 
     // Implementacion del metodo toString.
-    
+
     public String toString() {
-        return "\n\n"+Nombre+" "+ Apellidos+"\n"+DNI+"\n"+Provincia+", "+ Localidad+"\n"+Servicio+", "+Fecha_caducidad;
+        return Nombre+"\t"+ Apellidos+"\t"+DNI+"\t"+Provincia+"\t"+ Localidad+"\t"+Servicio+"\t"+Fecha_caducidad;
     }
 
+    //Implementacion de comparate.
+
+    public int compareTo(CarnetCruzRoja a){
+        int Apell = Apellidos.compareTo(a.Apellidos);
+        return (Apell != 0 ? Apell : Nombre.compareTo(a.Nombre));
+
+    }
+
+
 }
+
+
+

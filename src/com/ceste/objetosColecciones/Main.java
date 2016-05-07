@@ -1,12 +1,10 @@
 package com.ceste.objetosColecciones;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 
 public class Main {
-    public static void main (String [] args){
+    public static void main (String [] args) {
 
         ArrayList<CarnetCruzRoja> Carnets = new ArrayList<>();
 
@@ -58,7 +56,7 @@ public class Main {
         Carnets.add(carnet4);
         Carnets.add(carnet5);
 
-        //System.out.println(Carnets);
+        // System.out.println(Carnets);
 
         //Agregamos el HashSet.
 
@@ -70,6 +68,20 @@ public class Main {
         Cart.add(carnet4);
         Cart.add(carnet5);
 
-        System.out.println(Cart);
+        //System.out.println(Cart);
+
+        Set<CarnetCruzRoja> cComprble = new TreeSet<CarnetCruzRoja>();
+        cComprble.add(carnet1);
+        cComprble.add(carnet2);
+        cComprble.add(carnet3);
+        cComprble.add(carnet4);
+        cComprble.add(carnet5);
+
+        for (Iterator<CarnetCruzRoja> iter = cComprble.iterator(); iter.hasNext(); ) {
+            CarnetCruzRoja ccrComparable = iter.next();
+            System.out.println(ccrComparable);
+
+
+        }
     }
 }
