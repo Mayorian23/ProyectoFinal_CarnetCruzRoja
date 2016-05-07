@@ -77,6 +77,7 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     //Implementacion de comparate.
 
     public int compareTo(CarnetCruzRoja a){
+
         int Apell = Apellidos.compareTo(a.Apellidos);
         return (Apell != 0 ? Apell : Nombre.compareTo(a.Nombre));
 
