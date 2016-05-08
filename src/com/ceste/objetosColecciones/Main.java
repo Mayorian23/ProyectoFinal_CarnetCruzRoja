@@ -14,7 +14,7 @@ public class Main {
         carnet1.setProvincia("zaragoza");
         carnet1.setLocalidad("zaragoza");
         carnet1.setServicio("estudiante");
-        carnet1.setFecha_caducidad("10-8-2016");
+        carnet1.setFecha_caducidad("10/8/2016");
 
         CarnetCruzRoja carnet2 = new CarnetCruzRoja("Y8754985264E");
         carnet2.setNombre("carmen");
@@ -22,7 +22,7 @@ public class Main {
         carnet2.setProvincia("zaragoza");
         carnet2.setLocalidad("zaragoza");
         carnet2.setServicio("estudiante");
-        carnet2.setFecha_caducidad("15-8-2016");
+        carnet2.setFecha_caducidad("15/8/2016");
 
         CarnetCruzRoja carnet3 = new CarnetCruzRoja("Y7521354157E");
         carnet3.setNombre("luis");
@@ -30,7 +30,7 @@ public class Main {
         carnet3.setProvincia("zaragoza");
         carnet3.setLocalidad("zaragoza");
         carnet3.setServicio("estudiante");
-        carnet3.setFecha_caducidad("8-8-2016");
+        carnet3.setFecha_caducidad("19/8/2016");
 
         CarnetCruzRoja carnet4 = new CarnetCruzRoja("Y4874510215E");
         carnet4.setNombre("fitz");
@@ -38,7 +38,7 @@ public class Main {
         carnet4.setProvincia("zaragoza");
         carnet4.setLocalidad("zaragoza");
         carnet4.setServicio("estudiante");
-        carnet4.setFecha_caducidad("11-8-2016");
+        carnet4.setFecha_caducidad("11/8/2016");
 
         CarnetCruzRoja carnet5 = new CarnetCruzRoja("Y5489456214E");
         carnet5.setNombre("jorge");
@@ -46,7 +46,7 @@ public class Main {
         carnet5.setProvincia("zaragoza");
         carnet5.setLocalidad("zaragoza");
         carnet5.setServicio("estudiante");
-        carnet5.setFecha_caducidad("20-9-2016");
+        carnet5.setFecha_caducidad("20/9/2016");
 
         //Agregamos los objetos al arrayList.
         Carnets.add(carnet1);
@@ -92,9 +92,25 @@ public class Main {
         OrdenDNI.add(carnet4);
         OrdenDNI.add(carnet5);
 
-        for (Iterator<CarnetCruzRoja> iter = OrdenDNI.iterator(); iter.hasNext(); ) {
-            CarnetCruzRoja DNIordenado = iter.next();
-            System.out.println(DNIordenado);
+       // for (Iterator<CarnetCruzRoja> iter = OrdenDNI.iterator(); iter.hasNext(); ) {
+        //    CarnetCruzRoja DNIordenado = iter.next();
+          //  System.out.println(DNIordenado);
+        //}
+
+        //IMPLEMENTO COMPARATOR PARA FECHA
+
+        Comparator comparoFecha = new OrdenarPorFecha();
+        Set<CarnetCruzRoja> OrdenFecha = new TreeSet<>(comparoFecha);
+        OrdenFecha.add(carnet1);
+        OrdenFecha.add(carnet2);
+        OrdenFecha.add(carnet3);
+        OrdenFecha.add(carnet4);
+        OrdenFecha.add(carnet5);
+
+
+        for (Iterator<CarnetCruzRoja> iter = OrdenFecha.iterator(); iter.hasNext(); ) {
+            CarnetCruzRoja FECHAordenado = iter.next();
+            System.out.println(FECHAordenado);
         }
     }
 }
