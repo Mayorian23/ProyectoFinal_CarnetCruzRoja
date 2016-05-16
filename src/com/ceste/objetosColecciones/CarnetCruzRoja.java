@@ -1,5 +1,9 @@
 package com.ceste.objetosColecciones;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by Mayorian on 25/04/2016.
  */
@@ -64,8 +68,10 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
         Fecha_caducidad = fecha_caducidad;
     }
 
-    public String getFecha_caducidad() {
-        return Fecha_caducidad;
+    public Date getFecha_caducidad() throws ParseException {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = simpleDateFormat.parse(Fecha_caducidad);
+        return date;
     }
 
     // Implementacion del metodo toString.

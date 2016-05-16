@@ -22,7 +22,7 @@ public class Main {
         carnet2.setProvincia("zaragoza");
         carnet2.setLocalidad("zaragoza");
         carnet2.setServicio("estudiante");
-        carnet2.setFecha_caducidad("15/8/2016");
+        carnet2.setFecha_caducidad("25/8/2016");
 
         CarnetCruzRoja carnet3 = new CarnetCruzRoja("Y7521354157E");
         carnet3.setNombre("luis");
@@ -112,5 +112,8 @@ public class Main {
             CarnetCruzRoja FECHAordenado = iter.next();
             System.out.println(FECHAordenado);
         }
+
+        ExportaCarnets2CVS carnets2CVS = new ExportaCarnets2CVS(Carnets, "C:\\Users\\Mayorian\\IdeaProjects\\practica_objetos_colecciones\\ficheroM.csv");
+        carnets2CVS.guardarDatos();
     }
 }
