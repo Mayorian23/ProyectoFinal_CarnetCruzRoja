@@ -1,5 +1,6 @@
 package com.ceste.objetosColecciones;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +8,7 @@ import java.util.Date;
 /**
  * Created by Mayorian on 25/04/2016.
  */
-public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
+public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>, Serializable{
 
    private String Nombre;
    private String Apellidos;
@@ -17,7 +18,11 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
    private String Servicio;
    private String Fecha_caducidad;
 
-    public CarnetCruzRoja(String DNI){
+    public CarnetCruzRoja(){
+
+    }
+
+    public void setDNI(String DNI) {
         this.DNI = DNI;
     }
 
@@ -28,6 +33,7 @@ public class CarnetCruzRoja implements Comparable<CarnetCruzRoja>{
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
+
     public String getNombre() {
         return Nombre;
     }

@@ -8,7 +8,8 @@ public class Main {
 
         ArrayList<CarnetCruzRoja> Carnets = new ArrayList<>();
 
-        CarnetCruzRoja carnet1 = new CarnetCruzRoja("Y4587965254E");
+        CarnetCruzRoja carnet1 = new CarnetCruzRoja();
+        carnet1.setDNI("Y4587965254E");
         carnet1.setNombre("mayorian");
         carnet1.setApellidos("caballero");
         carnet1.setProvincia("zaragoza");
@@ -16,7 +17,8 @@ public class Main {
         carnet1.setServicio("estudiante");
         carnet1.setFecha_caducidad("10/8/2016");
 
-        CarnetCruzRoja carnet2 = new CarnetCruzRoja("Y8754985264E");
+        CarnetCruzRoja carnet2 = new CarnetCruzRoja();
+        carnet2.setDNI("Y8754985264E");
         carnet2.setNombre("carmen");
         carnet2.setApellidos("osorio");
         carnet2.setProvincia("zaragoza");
@@ -24,7 +26,8 @@ public class Main {
         carnet2.setServicio("estudiante");
         carnet2.setFecha_caducidad("25/8/2016");
 
-        CarnetCruzRoja carnet3 = new CarnetCruzRoja("Y7521354157E");
+        CarnetCruzRoja carnet3 = new CarnetCruzRoja();
+        carnet3.setDNI("Y7521354157E");
         carnet3.setNombre("luis");
         carnet3.setApellidos("calderin");
         carnet3.setProvincia("zaragoza");
@@ -32,7 +35,8 @@ public class Main {
         carnet3.setServicio("estudiante");
         carnet3.setFecha_caducidad("19/8/2016");
 
-        CarnetCruzRoja carnet4 = new CarnetCruzRoja("Y4874510215E");
+        CarnetCruzRoja carnet4 = new CarnetCruzRoja();
+        carnet4.setDNI("Y4874510215E");
         carnet4.setNombre("fitz");
         carnet4.setApellidos("barnez");
         carnet4.setProvincia("zaragoza");
@@ -40,7 +44,8 @@ public class Main {
         carnet4.setServicio("estudiante");
         carnet4.setFecha_caducidad("11/8/2016");
 
-        CarnetCruzRoja carnet5 = new CarnetCruzRoja("Y5489456214E");
+        CarnetCruzRoja carnet5 = new CarnetCruzRoja();
+        carnet5.setDNI("Y5489456214E");
         carnet5.setNombre("jorge");
         carnet5.setApellidos("garrido");
         carnet5.setProvincia("zaragoza");
@@ -67,6 +72,12 @@ public class Main {
         Cart.add(carnet3);
         Cart.add(carnet4);
         Cart.add(carnet5);
+
+        // for (Iterator<CarnetCruzRoja> iter = Cart.iterator(); iter.hasNext(); ) {
+        //  CarnetCruzRoja pruebaHash = iter.next();
+        // System.out.println(ccrComparable);
+        // }
+
 
         //System.out.println(Cart);
 
@@ -108,12 +119,20 @@ public class Main {
         OrdenFecha.add(carnet5);
 
 
-        for (Iterator<CarnetCruzRoja> iter = OrdenFecha.iterator(); iter.hasNext(); ) {
-            CarnetCruzRoja FECHAordenado = iter.next();
-            System.out.println(FECHAordenado);
-        }
+      //  for (Iterator<CarnetCruzRoja> iter = OrdenFecha.iterator(); iter.hasNext(); ) {
+        //    CarnetCruzRoja FECHAordenado = iter.next();
+          //  System.out.println(FECHAordenado);
+       // }
 
         ExportaCarnets2CVS carnets2CVS = new ExportaCarnets2CVS(Carnets, "C:\\Users\\Mayorian\\IdeaProjects\\practica_objetos_colecciones\\ficheroM.csv");
         carnets2CVS.guardarDatos();
+
+        CarnetsDb carnetsDb = new CarnetsDb(Carnets,"C:\\Users\\Mayorian\\IdeaProjects\\practica_objetos_colecciones\\ficheroM.ser");
+        carnetsDb.guardar();
+        carnetsDb.cargar();
+        CarnetCruzRoja carnet = new CarnetCruzRoja();
+        carnetsDb.add(carnet);
+        carnetsDb.guardar();
+        carnetsDb.cargar();
     }
 }
